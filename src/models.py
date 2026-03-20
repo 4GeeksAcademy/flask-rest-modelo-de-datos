@@ -63,3 +63,8 @@ class Media(db.Model):
 
     def serialize(self):
         return {"id": self.id, "url": self.url}
+
+
+if __name__ == "__main__":
+    from flask_sqlalchemy_visualizer import generate_diagram
+    generate_diagram(db, "diagram.png")
